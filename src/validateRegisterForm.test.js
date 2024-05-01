@@ -139,7 +139,7 @@ describe(`Function 'validateRegisterForm':`, () => {
     expect(invalidEmail.message).toBe('Email is invalid.');
   });
 
-  it(`should return success message for the valid input`, () => {
+  it(`should return error for the invalid input`, () => {
     const inValid = validateRegisterForm('testmail.com', 'Pass1!');
 
     expect(inValid.code).toBe(500);
